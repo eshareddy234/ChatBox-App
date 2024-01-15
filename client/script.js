@@ -1,5 +1,6 @@
 import bot from './assets/bot.svg'
 import user from './assets/user.svg'
+import cors from 'cors' //new
 
 const form = document.querySelector('form')
 const chatContainer = document.querySelector('#chat_container')
@@ -88,6 +89,7 @@ const handleSubmit = async (e) => {
 
     const response = await fetch('https://real-fatigues-slug.cyclic.app/', {            
         method: 'POST',
+        mode: 'cors',//new
         headers: {
             'Content-Type': 'application/json',
         },
